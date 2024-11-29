@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/test.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="my-container">
+        <div style="padding: 15px;" class="joke-view">
+            <h3>Жарти</h3>
+
+            <p><h5 style="white-space: pre-line">@Model.Content</h5></p>
+            <form method="post">
+                <input style="float: inline-end" type="submit" value="Наступний рандомний жарт" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

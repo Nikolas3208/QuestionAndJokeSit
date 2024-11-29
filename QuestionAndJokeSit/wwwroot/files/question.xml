@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<questions>
+    <question>
+        Який гаджет ви використовуєте найчастіше?
+        <type>Radio</type>
+        <options>
+            <Varian>Смартфон</Varian>
+            <Varian>Комп’ютер/ноутбук</Varian>
+            <Varian>Планшет</Varian>
+            <Varian>Смарт-годинник</Varian>
+        </options>
+    </question>
+    <question>
+        Скільки годин на день ви проводите в інтернеті?
+        <type>Radio</type>
+        <options>
+            <Varian>Менше 2 годин</Varian>
+            <Varian>2-4 години</Varian>
+            <Varian>5-7 годин</Varian>
+            <Varian>Понад 7 годин</Varian>
+        </options>
+    </question>
+    <question>
+        Яка соцмережа для вас є основною?
+        <type>Radio</type>
+        <options>
+            <Varian>Facebook</Varian>
+            <Varian>Instagram</Varian>
+            <Varian>TikTok</Varian>
+            <Varian>Інша</Varian>
+        </options>
+    </question>
+    <question>
+        Чи купуєте ви товари онлайн?
+        <type>Radio</type>
+        <options>
+            <Varian>Регулярно</Varian>
+            <Varian>Інколи</Varian>
+            <Varian>Рідко</Varian>
+            <Varian>Ніколи</Varian>
+        </options>
+    </question>
+    <question>
+        Як часто ви оновлюєте свої гаджети (телефон, ноутбук)?
+        <type>Radio</type>
+        <options>
+            <Varian>Щороку</Varian>
+            <Varian>Раз на 2-3 роки</Varian>
+            <Varian>Раз на 4-5 років</Varian>
+            <Varian>Лише коли вони ламаються</Varian>
+        </options>
+    </question>
+    <question>
+        Який тип технологій вас цікавить найбільше?
+        <type>Radio</type>
+        <options>
+            <Varian>Розумні будинки</Varian>
+            <Varian>Робототехніка</Varian>
+            <Varian>Штучний інтелект</Varian>
+            <Varian>Геймінг</Varian>
+            <Varian>Інша</Varian>
+        </options>
+    </question>
+    <question>
+        Чи використовуєте ви хмарні технології (Google Drive, iCloud)?
+        <type>Radio</type>
+        <options>
+            <Varian>Постійно</Varian>
+            <Varian>Інколи</Varian>
+            <Varian>Рідко</Varian>
+            <Varian>Ніколи</Varian>
+        </options>
+    </question>
+    <question>
+        Ваше ставлення до роботи з дому за допомогою технологій?
+        <type>Radio</type>
+        <options>
+            <Varian>Позитивне</Varian>
+            <Varian>Нейтральне</Varian>
+            <Varian>Негативне</Varian>
+            <Varian>Не працюю з дому</Varian>
+        </options>
+    </question>
+    <question>
+        Чи хвилює вас проблема кібербезпеки?
+        <type>Radio</type>
+        <options>
+            <Varian>Дуже хвилює</Varian>
+            <Varian>Помірно хвилює</Varian>
+            <Varian>Не дуже хвилює</Varian>
+            <Varian>Зовсім не хвилює</Varian>
+        </options>
+    </question>
+    <question>
+        Яке ваше ставлення до впливу технологій на довкілля?
+        Розкажіть свою думку ( не обовязково ) 
+        <type>Text</type>
+    </question>
+</questions>

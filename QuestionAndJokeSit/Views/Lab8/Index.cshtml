@@ -1,0 +1,45 @@
+﻿@using QuestionAndJokeSit.Controllers
+@*
+
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/test.css">
+    <style>
+        table, th, td {
+            border: 2px solid black;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="my-container">
+        @foreach(var lists in Model)
+        {
+            <h4>Table</h4>
+            <table>
+                <tr>
+                    <th> Name </th>
+                    <th> Affiliation </th>
+                    <th> Rank </th>
+                    <th> Location </th>
+                </tr>
+                @foreach (User list in lists)
+                {
+                    <tr>
+                        <td> @list.name </td>
+                        <td> @list.affiliation </td>
+                        <td> @list.rank </td>
+                        <td> @list.location </td>
+                    </tr>
+                }
+            </table>
+        }
+    </div>
+</body>
+</html>

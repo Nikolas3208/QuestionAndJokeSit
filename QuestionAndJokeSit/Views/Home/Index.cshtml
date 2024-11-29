@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/test.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="my-container">
+        @if (Model != null)
+        {
+            <h2 class="title">Тестування на тему "Технології та повсякденне життя"</h2>
+            <div class="test-form">
+                <form asp-action="SaveMyAnswers" asp-controller="Home" class="form-position" method="post">
+                    <label for="userName" class="lable-form">Введите имя </label>
+                    <input type="text" name="userName" class="lable-form"><br>
+                    <label for="email" class="lable-form">Введите почту</label>
+                    <input type="email" name="email" class="lable-form"><br><br>
+                    @foreach (QuestionModel questions in Model)
+                    {
+                        <div class="questions1">
+                            <h4><b>@questions.Id. @questions.QuestionText</b></h4>
+                            @if (questions.QuestionType == QuestionType.Radio)
+                            {
+                                @for (int i = 0; i < questions.questions.Count; i++)
+                                {
+                                    <div class="@questions.Id">
+                                        <label for="Answer">@(i + 1)</label>
+                                        <input name="Answer_@questions.Id" type="radio" value="@questions.questions[i]" />
+                                        <label for="Answer">@questions.questions[i]</label>
+                                    </div>
+                                }
+                            }
+                            @if (questions.QuestionType == QuestionType.CheckBox)
+                            {
+                                @for (int i = 0; i < questions.questions.Count; i++)
+                                {
+                                    <div class="@questions.Id">
+                                        <label for="Answer">@(i + 1)</label>
+                                        <input name="Answer_@questions.Id" type="checkbox" value="@questions.questions[i]" />
+                                        <label for="Answer">@questions.questions[i]</label>
+                                    </div>
+                                }
+                            }
+                            @if (questions.QuestionType == QuestionType.Text)
+                            {
+                                <div class="reply1">
+                                    <input style="margin-bottom: 15px;" type="text" name="Answer_@questions.Id" /><br>
+                                </div>
+                            }
+                        </div>
+                    }
+                    <input style="margin-bottom: 10px;" type="submit" value="Отправить" />
+                </form>
+            </div>
+        }
+        @if (Model == null)
+        {
+            <div style="padding:10px;">
+                <h4>Виберіть файл з тестом на свому компьютері</h4>
+                <form asp-action="AddFile" asp-controller="Home" style="margin:10px;" method="post" enctype="multipart/form-data">
+                    <input style="margin-top:10px;" name="uploadedFile" type="file" accept="text/xml" /><br />
+                    <input style="margin-top:10px;" name="filetest" type="submit" value="Пройти вибраний тест" />
+                </form>
+            </div>
+        }
+    </div>
+</body>
+</html>
